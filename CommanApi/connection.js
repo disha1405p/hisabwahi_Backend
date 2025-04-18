@@ -36,8 +36,8 @@ async function getDB(collectionName) {
         initializeConnection();
     }
     return client.db(dbname).collection(collectionName);
-   }catch(disha){
-    console.error('MongoDB connection error:', disha);
+   }catch(error){   
+    console.error('MongoDB connection error:', error);
     throw error;
    }
    

@@ -21,6 +21,7 @@ const deleteTransactionApi = require('./DeletetransactionApi/deletetransaction')
 const loginApi = require('./LoginApi/login');
 const loginApi1 = require('./LoginApi1/login1');
 const deleteCustomerApi = require('./DeletecustomerApi/deletecustomer');
+const getIndividualHisory = require('./Customer1/getIndividualCustomer')
 
 deleteCustomerApi()
   .then((router) => {
@@ -51,6 +52,7 @@ app.use('/get', getpaymentcustomer);
 app.use('/get', getSales);
 app.use('/get', getPayment);
 app.use('/get', getCustomer);
+app.use('/get', getIndividualHisory);
 app.use('/edit', editTransactionApi);
 app.use('/edit', editPaymentApi);
 app.use('/edit', editCustomerApi);
